@@ -75,10 +75,10 @@ export const TwitterDashboard = (props) => {
             {props.twitter.twitList !== null && props.twitter.twitList !== undefined ?
                 <div style={{ margin: 20 }}>
                     {props.twitter.twitList.map((list) => (
-                        <div className={classes.section}>
-                            <div onClick={() => {
-                                fetchTweetsByTagSearch(list.value);
-                            }} className={classes.sectionHeader}>{list.value}
+                        <div className={classes.section} onClick={() => {
+                            fetchTweetsByTagSearch(list.value);
+                        }}>
+                            <div className={classes.sectionHeader}>{list.value}
                                 <btn >
                                     <FontAwesomeIcon icon={!ShowQuote ? 'caret-right' :
                                         props.twitter.twitResponse[0].tag === list.value ? 'caret-down' : 'caret-right'}
