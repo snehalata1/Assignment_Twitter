@@ -3,9 +3,8 @@ import React from "react";
 import { Route, Switch, useParams } from "react-router-dom";
 import { Router } from 'react-router';
 import { createBrowserHistory } from 'history';
-
-import TwitterDashboard from './containers/twitter';
-import Snackbar from './containers/snackbar/snackbar'
+import Dashboard from './containers/dashboard';
+import Snackbar from './containers/snackbar/snackbar';
 
 const history = createBrowserHistory();
 
@@ -16,11 +15,11 @@ history.listen(location => {
 const Routes = () => {
   return (
     <>
-      <Snackbar />
+      {/* <Snackbar /> */}
       <Router history={history}>
         <Switch>
-          <Route exact path="/" component={TwitterDashboard} />
-          <Route exact path="/dashboard" component={TwitterDashboard} />
+          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/dashboard" component={Dashboard} />
         </Switch>
       </Router>
 

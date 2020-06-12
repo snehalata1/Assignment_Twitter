@@ -34,14 +34,14 @@ export const Snackbar = (props) => {
       const payload = {
         method: "POST",
         data: {
-          ErrorLog: {
-            AccountID: props.user.data.AccountID,
-            EmailAddress: props.user.data.EmailAddress,
-            ErrorMessage: `${"DRxUI"} ${message} URL - ${url}`, // " " + message,
-            InnerException: `${"DRxUI"} ${message} URL - ${url}`,
-            ErrorNumber: "111111",
-            Severity: "Moderate",
-          },
+          // ErrorLog: {
+          //   AccountID: props.user.data.AccountID,
+          //   EmailAddress: props.user.data.EmailAddress,
+          //   ErrorMessage: `${"DRxUI"} ${message} URL - ${url}`, // " " + message,
+          //   InnerException: `${"DRxUI"} ${message} URL - ${url}`,
+          //   ErrorNumber: "111111",
+          //   Severity: "Moderate",
+          // },
         },
       };
 
